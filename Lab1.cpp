@@ -8,6 +8,12 @@ using namespace std;
 class GradeBook
 {
 public:
+	// constructor initializes CourseName
+	GradeBook( string name )
+	{
+		setCourseName( name );
+	}
+	
 	// function that sets the course name
 	void setCourseName( string name )
 	{
@@ -32,15 +38,12 @@ private:
 //	function main begins program execution
 int main()
 {
-	string nameOfCourse; // string to store the course name
-	GradeBook myGradeBook; // create a GradeBook object
+	GradeBook gradeBook1( "CS Language Course" );
+	GradeBook gradeBook2( "Operating Systems" );
 	
-	// prompt for and input course name
-	cout << "Please enter the course name:" << endl;
-	getline( cin, nameOfCourse ); // read a course name with blanks
-	myGradeBook.setCourseName( nameOfCourse );
-	
-	cout << endl;
-	myGradeBook.displayMessage( nameOfCourse ); //call function to display
+	// display initial value of courseName for each GradeBook
+	cout << "gradeBook1 created for course: " << gradeBook1.getCourseName()
+		<< "\ngradeBook2 created for course: " << gradeBook2.getCourseName()
+		<< endl;
 	return 0;
 }
