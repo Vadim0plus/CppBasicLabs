@@ -8,11 +8,25 @@ using namespace std;
 class GradeBook
 {
 public:
+	// function that sets the course name
+	void setCourseName( string name )
+	{
+		courseName = name;
+	}
+	
+	// function that gets the course name
+	string getCourseName()
+	{
+		return courseName;
+	}
+	
 	// function that display a message to the GradeBook user
 	void displayMessage(string courseName)
 	{
-		cout << "Welcome to the Grade Book\n" << courseName << "!" <<endl;
+		cout << "Welcome to the Grade Book\n" << getCourseName() << "!" <<endl;
 	}
+private:
+	string courseName; // course name for this GradeBook
 };
 
 //	function main begins program execution
@@ -24,8 +38,9 @@ int main()
 	// prompt for and input course name
 	cout << "Please enter the course name:" << endl;
 	getline( cin, nameOfCourse ); // read a course name with blanks
-	cout << endl;
+	myGradeBook.setCourseName( nameOfCourse );
 	
+	cout << endl;
 	myGradeBook.displayMessage( nameOfCourse ); //call function to display
 	return 0;
 }
