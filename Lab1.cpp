@@ -1,43 +1,13 @@
-//Lab1
-//Define class GradeBook with a member function DisplayMessage
+//Lab1: Lab1.cpp
+//Driver program for GradeBook class
 #include <iostream>
-#include <string> // program uses C++ standard string class
+#include "GradeBook.h"
 using namespace std;
-
-//GradeBook class definition
-class GradeBook
-{
-public:
-	// constructor initializes CourseName
-	GradeBook( string name )
-	{
-		setCourseName( name );
-	}
-	
-	// function that sets the course name
-	void setCourseName( string name )
-	{
-		courseName = name;
-	}
-	
-	// function that gets the course name
-	string getCourseName()
-	{
-		return courseName;
-	}
-	
-	// function that display a message to the GradeBook user
-	void displayMessage(string courseName)
-	{
-		cout << "Welcome to the Grade Book\n" << getCourseName() << "!" <<endl;
-	}
-private:
-	string courseName; // course name for this GradeBook
-};
 
 //	function main begins program execution
 int main()
 {
+	// create two GradeBook objects
 	GradeBook gradeBook1( "CS Language Course" );
 	GradeBook gradeBook2( "Operating Systems" );
 	
