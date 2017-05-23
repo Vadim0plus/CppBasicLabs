@@ -32,8 +32,34 @@ string GradeBook::getCourseName()
 }
 	
 // function that display a message to the GradeBook user
-void GradeBook::displayMessage(string courseName)
+void GradeBook::displayMessage()
 {
-	cout << "Welcome to the Grade Book\n" << getCourseName() << "!" <<endl;
+	cout << "Welcome to the Grade Book for\n" << getCourseName() << "!" <<endl;
+}
+
+void GradeBook::determineClassAverage()
+{
+	int total; // sum of grades
+	int gradeCounter; // number of the grade to be entered next
+	int grade; // grade value entered by user
+	int average; // average of grades
+	
+	//Initialization phase
+	total = 0;
+	gradeCounter = 1;
+	
+	//Processing phase
+	while ( gradeCounter <= 10)
+	{
+		cout << "Enter grade: ";
+		cin >> grade;
+		total = total + grade;
+		gradeCounter = gradeCounter + 1;
+	}
+	
+	//termination phase
+	average = total / 10;
+	cout << "\nTotal of all 10 grades is " << total << endl;
+	cout << "Class average is " << average << endl;
 }
 

@@ -10,7 +10,8 @@ public:
 	GradeBook( string ); // constructor initializes CourseName
 	void setCourseName( string ); // function that sets the course name
 	string getCourseName(); // function that gets the course name
-	void displayMessage(string courseName); // function that display a message to the GradeBook user
+	void displayMessage(); // function that display a message to the GradeBook user
+	void determineClassAverage(); //averages grades entered by the user
 private:
 	string courseName; // course name for this GradeBook
 };
